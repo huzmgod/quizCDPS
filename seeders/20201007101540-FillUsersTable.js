@@ -5,7 +5,6 @@ var crypt = require('../helpers/crypt');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    try {
     await queryInterface.bulkInsert('Users', [
       {
         username: 'admin',
@@ -22,9 +21,7 @@ module.exports = {
         accountTypeId: 0,
         createdAt: new Date(), updatedAt: new Date()
       }
-    ]); } catch (error) {
-      console.log("Error")
-    }
+    ]); 
   },
 
   down: async (queryInterface, Sequelize) => {
