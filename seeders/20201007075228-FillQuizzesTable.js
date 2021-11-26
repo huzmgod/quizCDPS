@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    try{
+    
     await queryInterface.bulkInsert('Quizzes', [
       {
         question: 'Capital of Italy',
@@ -28,9 +28,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       }
-    ]); }catch (error) {
-     console.log("Error")
-    }
+    ]); 
   },
 
   down: async (queryInterface, Sequelize) => {
